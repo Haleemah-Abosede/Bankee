@@ -12,6 +12,10 @@ body{
     overflow-x: hidden;
 }
 
+nav a.menu{
+    display: none;
+}
+
 nav{
     display: flex;
     padding: 1.5rem 4.3rem;
@@ -20,6 +24,7 @@ nav{
     position: fixed;
     background-color: #FFFFFF;
     width: 100%;
+    z-index: 10;
 }
 
 nav a{
@@ -51,6 +56,10 @@ nav .links select{
     background: #F8F8F8;
     border-radius: 6px;
     padding: 8px 8px 8px 12px;
+}
+
+nav .links .acc{
+    display: none;
 }
 
 nav .acc{
@@ -227,6 +236,8 @@ nav .acc a.sign-up{
     padding: 4.7rem 8rem 0;
     display: flex;
     background-color: #E8F2EE !important;
+    position: relative;
+    justify-content: space-between;
 }
 
 .transaction .t-left h2{
@@ -267,11 +278,6 @@ nav .acc a.sign-up{
    color: #1A191E;
 }
 
-.transaction .t-right{
-    flex: 50%;
-    width: 100%;
-    margin-bottom: -.3rem;
-}
 
 .savings{
     padding: 3rem 8rem;
@@ -760,8 +766,9 @@ color: #1A191E;
     background-color: #5BB5A2;
     border-radius: 20px;
     display: flex;
-    padding: 96px 76px 1px 76px;
+    padding: 8rem 4rem 0 4rem;
     gap: 3rem;
+    position: relative;
 }
 .cta .cta-left{
    flex: 50%;
@@ -776,7 +783,7 @@ color: #1A191E;
     font-size: 50px;
     line-height: 110%;
     letter-spacing: -0.03em;
-   margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .cta .cta-left p{
@@ -816,15 +823,13 @@ color: #1A191E;
 }
 
 .cta .cta-right .cta-empty{
-  
     margin-top: 2.60rem;
 }
 
 .cta .cta-right img{
-   width: 100%;
-   margin-bottom: 0rem;
+   bottom: 0;
    display: flex;
-  
+  position: absolute;
 }
 
 /* faq section */
@@ -946,7 +951,6 @@ color: #1A191E;
 /* blog section */
 .blog{
     padding: 2.7rem 8rem;
-    /* display: flex; */
     margin-bottom: 4rem;
 }
 
@@ -1077,4 +1081,219 @@ footer .foot-sides .nine a{
     color: rgba(26, 25, 30, 0.5);
     
 }
+
+@media(max-width:1024px){
+    .f-right img{
+        width: 250px;
+    }
+    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog{
+        padding-left:4rem;
+        padding-right:4rem;
+    }
+    .cta{
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .testimonials .bottom-box {
+        column-count: 2;
+        column-gap: 2rem;
+    }
+    .cta .cta-right img{
+      width: 35%;
+     }
+}
+
+@media(max-width:768px){
+    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog{
+        padding-left:3rem;
+        padding-right:3rem;
+    }
+    .hero{
+        padding-bottom: 4rem;
+    }
+    .hero .h-left h2{
+       
+        font-size: 60px;
+    }
+    .hero .h-left p{
+        font-size: 20px;
+    }
+    .hero .h-left .services,  .hero .h-left .buttons a{
+        font-size: 16px;
+    }
+
+    .f-right img, .feat .f-right{
+       display: none;
+    }
+   
+    .savings .s-down .s-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: .6rem;
+    }
+
+    nav {
+        padding: 1.5rem 1.3rem;
+        
+    }
+
+    .transaction {
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       gap: 1rem;
+    }
+
+    .notification {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+       gap: 3rem;
+    }
+
+    .testimonials .bottom-box {
+        column-count: 2;
+        column-gap: 5rem;
+    }
+    
+    .cta{
+        margin-left: 3rem;
+        margin-right: 3rem;
+        padding: 6rem 2rem 0 2rem;
+    }
+    
+    footer{
+        padding: 3rem 3rem 2rem;
+        display: flex;
+        gap: 3rem;
+    }
+
+    .feat .all-feature {
+        margin-right: 2rem;
+    }
+
+
+}
+
+@media(max-width:425px){
+    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog{
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+   nav .acc{
+        display: none;
+    }
+
+    nav .links{
+        flex-direction: column;
+        gap: 2rem;
+       position: absolute;
+      top: 99%;
+      right: 0;
+      background-color: #FFFFFF;
+      width: fit-content;
+      padding: 1rem 2rem;
+      height: 100vh;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0)
+    }
+
+   nav .links.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  nav .links .acc{
+    display: inline-flex;
+    flex-direction: column;
+  }
+
+  nav a.menu{
+    display: block;
+}
+
+    .hero .h-right{
+        display: none;
+    }
+
+    .feat .all-feature {
+        margin-right: 0;
+    }
+
+    .notification .n-right img {
+        width: 100%;
+    }
+
+    .savings .s-top {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .savings .s-top .s-right .empty {
+        margin-top: 3rem;
+    }
+    .tools .t-down {
+        flex-direction: column;
+    }
+
+    .tools .t-down .tright .t-empty {
+        margin-top: 3rem;
+    }
+
+    .cards .c-word{
+        width: 100%;
+    }
+    .cards img{
+        width: 100%;
+    }
+
+    .testimonials .top-box{
+       flex-direction: column;
+    }
+    .testimonials .top-box .top-right{
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .testimonials .bottom-box{
+        column-count: 1;
+        column-gap: 2rem;
+    }
+
+    .savings .s-down .s-list {
+        gap: .3rem;
+    }
+
+    .cta{
+        flex-direction: column;
+        padding: 4rem 2.5rem;
+    }
+
+    .cta .cta-right .cta-empty, .cta .cta-right img{
+       display: none;
+    }
+    .cta .cta-buttons img{
+        width: 100%;
+       
+    }
+
+    .faq, .blog .blog-posts, footer{
+        flex-direction: column;
+    }
+    
+    footer{
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer .foot-sides{
+        gap: 1.3rem;
+        flex-flow: row wrap;
+        margin-bottom: 1rem;
+    }
+
+    .transaction .t-right img{
+        width: 100%;
+    }
+}
+
+
 

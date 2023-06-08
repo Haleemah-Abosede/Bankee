@@ -22,31 +22,20 @@ for   ( i=0; i < acc.length; i++ ){
 }
 
 
-// another one
+// menu
+let menu = document.querySelector('#menu');
+let navbar = document.querySelector('.links' )
 
-// DOM here
-// let nav = document.querySelector(".eight");
+menu.onclick = () =>{
+    navbar.classList.toggle('active');
+}
 
-// // Handlers here
-// const clickHandler = function (e) {
-//   if (e.target.classList.contains("question")) {
-//     const link = e.target; // clicked link
+navbar.onclick = () => {
+    navbar.classList.remove('active');
+}
 
-//     const siblings = link.closest(".eight").querySelectorAll(".question");
 
-//     link.classList.toggle("active");
-//     link.children[0].classList.toggle("answer");
 
-//     // removes all actives except for the clicked one
-//     siblings.forEach((el) => {
-//       if (el !== link) {
-//         el.classList.remove("active");
-//         el.children[0].classList.add("answer");
-//       }
-//     });
-//   }
-// };
-
-// // Listeners here
-// nav.addEventListener("click", clickHandler);
-
+window.onscroll = () =>{
+    navbar.classList.remove('active');
+}
