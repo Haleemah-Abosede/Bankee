@@ -1382,6 +1382,9 @@ footer .foot-sides .nine a{
         gap: 1.5em;
        
      }
+     .f-transact{
+        gap: 10em;
+     }
      .bank-grid{
         padding-left:2rem;
         padding-right:2rem;
@@ -1413,21 +1416,21 @@ footer .foot-sides .nine a{
 }
 
 @media(max-width:768px){
-    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog{
+    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog, .f-transact, .choose{
         padding-left:3rem;
         padding-right:3rem;
     }
     .hero{
         padding-bottom: 4rem;
     }
-    .hero .h-left h2{
+    .hero .h-left h2, .hero-f h1{
        
         font-size: 60px;
     }
     .hero .h-left p{
         font-size: 20px;
     }
-    .hero .h-left .services,  .hero .h-left .buttons a{
+    .hero .h-left .services,  .hero .h-left .buttons a, .hero-f p, .hero-f h4, .f-transact .f-transact-left h4, .choose .choose-top h4{
         font-size: 16px;
     }
 
@@ -1481,11 +1484,35 @@ footer .foot-sides .nine a{
         margin-right: 2rem;
     }
 
+    .f-transact{
+        gap: 4em;
+     }
+
+     .bank-grid .bk-bottom .item3{
+        grid-column: 2/5;
+       }
+       .bank-grid .bk-bottom .item4{
+        grid-column: 5/8;
+        
+       }
+       .bank-grid .bk-bottom .item5{
+        grid-column:3/6;
+       }
+       .bank-grid .bk-bottom .item5 img{
+        width: 85%;
+        position: static;
+        margin: auto;
+     }
+
+     .choose .choose-bottom .slide p{
+        margin: auto 1em;
+     }
+
 
 }
 
 @media(max-width:425px){
-    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog{
+    .hero, .feat, .transaction, .savings, .notification, .tools, .cards, .testimonials,  .faq, .blog, .f-transact, .choose{
         padding-left:2rem;
         padding-right:2rem;
     }
@@ -1574,6 +1601,8 @@ footer .foot-sides .nine a{
     .cta{
         flex-direction: column;
         padding: 4rem 2.5rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .cta .cta-right .cta-empty, .cta .cta-right img{
@@ -1582,6 +1611,9 @@ footer .foot-sides .nine a{
     .cta .cta-buttons img{
         width: 100%;
        
+    }
+    .cta .cta-left .cta-buttons{
+        padding-bottom: 0;
     }
 
     .faq, .blog .blog-posts, footer{
@@ -1602,7 +1634,39 @@ footer .foot-sides .nine a{
     .transaction .t-right img{
         width: 100%;
     }
-}
 
+    .f-transact{
+        flex-direction: column;
+    }
+
+    .bank-grid .bk-bottom{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bank-grid .bk-bottom .item1 img{
+        width: 75%;
+        position: static;
+        margin: auto;
+     }
+     .choose .choose-bottom{
+        flex-direction: column;
+     
+     }
+  .hero-f h1 {
+        font-size: 50px;
+    }
+    .f-transact .f-transact-left h1, .bank-grid .bk-top h1, .choose .choose-top h1{
+        font-size: 50px;
+    }
+
+   .f-transact .f-transact-right img{
+    width: 100%;
+   }
+   .hero-f .f-begin{
+    padding: 4em 2em 8em;
+    text-align: center;
+   }
+}
 
 
